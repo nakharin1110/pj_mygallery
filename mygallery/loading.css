@@ -1,0 +1,30 @@
+.loader{
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader > img{
+  width: 100%;
+}
+.loader.hidden{
+  animation: fadeOut 1.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut{
+  100%{
+    opacity: 0.8;
+    visibility: hidden;
+  }
+}
+.thump{
+  height: 100px;
+  border: 1px solid black;
+  margin: 10px;
+}

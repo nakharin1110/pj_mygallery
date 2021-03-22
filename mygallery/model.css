@@ -1,0 +1,101 @@
+#card-img{
+    width: 80%;
+    margin-top: 10px;
+    color: #fff;
+}
+.col-md-4{
+    margin: 10px 0;
+}
+#img-user:hover{
+    transform: scale(1.01);
+    transition: 0.8;
+}
+#img-user{
+    height: 480px;
+    width: 100%;
+}
+div.card-body{
+    color: black;
+}
+h1{
+    font-family: 'Lobster';
+    text-shadow: 1px 1px 5px rgb(0, 0, 0);
+    letter-spacing: 1px;
+    cursor: context-menu;
+    margin: 5px;
+    color: rgb(255, 0, 0);
+}
+div.card{
+    background-color: hsla(0, 0%, 100%, 0.2);
+    box-shadow: 1px 1px 7px black;
+}
+#btn-delete{
+    text-shadow: 1px 1px 5px rgb(0, 0, 0);
+    opacity: 0.9;
+    color: #fff;
+    margin: 3px 5px;
+    background-image: linear-gradient(rgb(255, 0, 0), rgb(40, 39, 65));
+}
+#btn-delete:hover, #btn-edit:hover{
+    opacity: 1;
+    transform: scale(1.03);
+    transition: 0.8;
+}
+#btn-edit{
+    text-shadow: 1px 1px 5px rgb(0, 0, 0);
+    color: #fff;
+    opacity: 0.9;
+    margin: 3px 5px;
+    background-image: linear-gradient(rgb(255, 208, 0), rgb(40, 39, 65));
+}
+
+div.text{
+    background-color: hsla(0, 0%, 100%, 0.2);
+    padding: 5px 5px;
+    margin: 2rem 0;
+}
+div.text h3{
+    font-family: fantasy;
+    margin-top: 15px;
+    text-shadow: 1px 1px 5px rgb(0, 0, 0);
+}
+#btnupload{
+    text-shadow: 1px 1px 5px rgb(0, 0, 0);
+    opacity: 0.9;
+    background-image: linear-gradient(rgb(0, 255, 55), rgb(40, 39, 65));
+    font-size: 20px;
+}
+#btnupload:hover{
+    opacity: 1;
+    transform: scale(1.05);
+    transition: 0.8;
+}
+#btn-cancel{
+    text-shadow: 1px 1px 5px rgb(0, 0, 0);
+    padding: 10px;
+    opacity: 0.9;
+    background-image: linear-gradient(rgb(255, 0, 0), rgb(40, 39, 65));
+    font-size: 16px;
+}
+#btn-upload{
+    text-shadow: 1px 1px 5px rgb(0, 0, 0);
+    padding: 10px;
+    opacity: 0.9;
+    background-image: linear-gradient(rgb(0, 255, 55), rgb(40, 39, 65));
+    font-size: 16px;
+    display: inline;   
+}
+#btn-upload:hover, #btn-cancel:hover, #btn_home:hover{
+    opacity: 1;
+    transform: scale(1.05);
+    transition: 0.8;
+}
+div.d-grid{
+    margin: 1.5rem auto;
+}
+#image_home{
+    width: 500px;
+    height: 430px;
+    border-radius: 6px;
+    box-shadow: 10px 10px 10px #0000;
+}

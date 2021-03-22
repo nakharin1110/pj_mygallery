@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Gallery | Home</title>
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-5.0.0-beta2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="model.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" type="text/css" href="loading.css" />
+
+</head>
+<body>
+
+    <div class="loader">
+      <img src="image/loading2.gif" alt="Loading...">
+    </div>
+    <header>
+
+        <nav class="navbar navbar-light">
+            <div class="container-fluid">
+                <a class="navbarbrand ms-5">MY Gallery</a>
+                <div class="navbar-nav d-inline">
+                    <a class="btn" href="login.php"><img width="22" height="22" src="./image/iconlogin.png" alt=""> login</a>
+                    <span style="font-weight: 900;">|</span>
+                    <a class="btn" href="register.php"><img width="22" height="22" src="./image/iconper.png" alt=""> register</a>
+                </div>
+            </div>
+          </nav>
+
+    </header>
+
+    <div class="container overflow-hidden mt-5 mb-4">
+        <div class="row gx-5">
+            <div class="col">
+                <h1 id="home_head" class="float-start">My gallery</h1>
+                <p style="color: #fff; font-size: 20px;font-family:georgia, serif; text-indent: 50px;" class="float-start">Meet the new dimension of your photo collection. 
+                    That will take you to keep a record of various stories 
+                    Many of them are reminiscent of Our website responds 
+                    to the needs of you in the field of keeping good memories through pictures. 
+                    You can also delete or edit various information about images. Please visit our website. </p>
+                    <a href="login.php" id="btn_home" class="float-start btn" style="color: #fff; border: 2px solid #fff;">Go to the website</a>
+            </div>
+            <div class="col ms-4">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active" width="80%" height="300px" >
+                        <img src="ImageTest/3.jpg" id="image_home" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item" width="80%" height="300px" >
+                        <img src="ImageTest/6.jpg" id="image_home" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item" width="80%" height="300px" >
+                        <img src="ImageTest/7.jpg" id="image_home" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item" width="80%" height="300px" >
+                        <img src="ImageTest/8.jpg" id="image_home" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item" width="80%" height="300px" >
+                        <img src="ImageTest/6.jpg" id="image_home" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item" width="80%" height="300px" >
+                        <img src="ImageTest/3.jpg" id="image_home" class="d-block w-100" alt="...">
+                      </div>
+                      
+                   
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-basic">
+        <footer>
+            <div class="social">
+            <a href="https://www.facebook.com/nakharin.moksuwan" target="_blank"><img width="25px" height="30px" src="./image/fb.png" alt=""></a>
+            <a href="https://www.instagram.com/nkr.msw/" target="_blank"><img width="25px" height="30px" src="./image/ig.png" alt=""></a>
+            </div>
+            <div class="list-item">
+                <a href="home.html">HOME</a>
+                <a href="login.php">LOGIN</a>
+                <a href="register.php">REGISTER</a>
+            </div>
+            <p>Website My Gallery © 2021</p>
+            <p>Rajamangala Univwesity of Technology Rattanakosin</p>
+        </footer>
+    </div>
+    
+    <script src="model.js" type="text/javascript"></script>
+    <script src="bootstrap-5.0.0-beta2-dist/js/bootstrap.js"></script>
+    <script src="bootstrap-5.0.0-beta2-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
