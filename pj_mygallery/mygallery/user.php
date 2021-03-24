@@ -46,6 +46,7 @@
           
           <p class="text-user"><img width="22" height="24" src="./image/iconper.png" alt=""> <?php if(isset($_SESSION['username'])){echo $_SESSION['username'];} ?></p>
           <span style="font-weight: 900;">|</span>
+          <a class="btn" href="contact.php?a_contact=<?php echo $_SESSION['username'];?>"><img width="22" height="22" src="./image/icontitle.png" alt=""> contact</a>
           <a class="btn" href="logout.php?a_logout"><img width="22" height="22" src="./image/iconlogout.png" alt=""> logout</a>
         </div>
       </div>
@@ -92,7 +93,7 @@
                         <?php 
                             echo $_SESSION['upload_succ']; 
                             unset($_SESSION['upload_succ']);
-                            header('Refresh:3');
+                            
                         ?>
                     </h3>
                 </div>

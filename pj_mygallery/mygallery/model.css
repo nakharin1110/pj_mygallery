@@ -36,7 +36,7 @@ div.card{
     margin: 3px 5px;
     background-image: linear-gradient(rgb(255, 0, 0), rgb(40, 39, 65));
 }
-#btn-delete:hover, #btn-edit:hover{
+#btn-delete:hover, #btn-edit:hover, #btn-view:hover{
     opacity: 1;
     transform: scale(1.03);
     transition: 0.8;

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 22, 2021 at 09:57 AM
+-- Generation Time: Mar 24, 2021 at 10:46 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.4.15
 
@@ -20,6 +20,27 @@ SET time_zone = "+00:00";
 --
 -- Database: `gallerydb`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contact`
+--
+
+CREATE TABLE `contact` (
+  `contactID` int(10) NOT NULL,
+  `title` varchar(50) NOT NULL,
+  `detail` varchar(255) NOT NULL,
+  `email` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `contact`
+--
+
+INSERT INTO `contact` (`contactID`, `title`, `detail`, `email`) VALUES
+(5, 'test2', 'i can\'t upload file.', 'thiw@gmail.com'),
+(6, 'test', 'upload file fail.', 'thiw@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -50,9 +71,8 @@ INSERT INTO `tb_file` (`id`, `detail`, `image`, `userID`) VALUES
 (25, 'TEST1', 'TEST11.jpg', 1),
 (26, 'TEST2', 'TEST21.jpg', 1),
 (27, 'TEST3', 'TEST31.jpg', 1),
-(28, 'TEST4', 'TEST41.jpg', 1),
 (29, 'TEST5', 'TEST51.jpg', 1),
-(30, 'TEST6', 'TEST61.jpg', 1),
+(30, 'TEST8', 'TEST81.jpg', 1),
 (32, 'TEST3', 'TEST33.jpg', 3);
 
 -- --------------------------------------------------------
@@ -76,12 +96,17 @@ INSERT INTO `user_tb` (`id`, `email`, `username`, `password`) VALUES
 (1, 'thiw@gmail.com', 'thiwtest', '123456'),
 (3, 'thin@gmail.com', 'thintest', '123456'),
 (4, 'por@gmail.com', 'portest', '123456'),
-(6, 'aun@gmail.com', 'auntest', '123456'),
-(8, 'ween1@gmail.com', 'weentest', '123456');
+(6, 'aun1@gmail.com', 'auntest', '000000');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `contact`
+--
+ALTER TABLE `contact`
+  ADD PRIMARY KEY (`contactID`);
 
 --
 -- Indexes for table `tb_file`
@@ -100,10 +125,16 @@ ALTER TABLE `user_tb`
 --
 
 --
+-- AUTO_INCREMENT for table `contact`
+--
+ALTER TABLE `contact`
+  MODIFY `contactID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT for table `tb_file`
 --
 ALTER TABLE `tb_file`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `user_tb`

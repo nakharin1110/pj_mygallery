@@ -45,6 +45,8 @@
         <div class="navbar-nav d-inline">
           <p class="text-user"><img width="22" height="24" src="./image/iconper.png" alt=""> <?php if(isset($_SESSION['admin'])){echo $_SESSION['admin'];} ?></p>
           <span style="font-weight: 900;">|</span>
+          <a class="btn" href="admin.php"><img width="22" height="22" src="./image/iconuser.png" alt=""> user</a>
+          <a class="btn" href="admin_con.php"><img width="22" height="22" src="./image/icontitle.png" alt=""> contact</a>
           <a class="btn" href="logout.php?a_logout"><img width="22" height="22" src="./image/iconlogout.png" alt=""> logout</a>
         </div>
       </div>
@@ -57,81 +59,48 @@
     <div class="text">
       <div class="text-control">
         <h1>My gallery</h1>
-        <h3>User in the system</h3>
+        <h3>Contact in the system</h3>
       </div>
 
-      <?php if(isset($_SESSION['login_admin'])) : ?>
-                  <div class="text-center alert alert-success">
-                      <h3 id="alert" style="font-family: fantasy;text-shadow: none;">
-                          <?php 
-                              echo $_SESSION['login_admin']; 
-                              unset($_SESSION['login_admin']);
-                          ?>
-                      </h3>
-                  </div>
-        <?php endif ?>
-        <?php if(isset($_SESSION['error_edituser'])) : ?>
-                  <div class="text-center alert alert-danger">
-                      <h3 id="alert" style="font-family: fantasy;text-shadow: none;">
-                          <?php 
-                              echo $_SESSION['error_edituser']; 
-                              unset($_SESSION['error_edituser']);
-                          ?>
-                      </h3>
-                  </div>
-        <?php endif ?>
-        <?php if(isset($_SESSION['updateuser_succ'])) : ?>
-                  <div class="text-center alert alert-success">
-                      <h3 id="alert" style="font-family: fantasy;text-shadow: none;">
-                          <?php 
-                              echo $_SESSION['updateuser_succ']; 
-                              unset($_SESSION['updateuser_succ']);
-                          ?>
-                      </h3>
-                  </div>
-        <?php endif ?>
-        <?php if(isset($_SESSION['delete_succ'])) : ?>
-                  <div class="text-center alert alert-success">
-                      <h3 id="alert" style="font-family: fantasy;text-shadow: none;">
-                          <?php 
-                              echo $_SESSION['delete_succ']; 
-                              unset($_SESSION['delete_succ']);
-                          ?>
-                      </h3>
-                  </div>
-        <?php endif ?>
-
     </div>
+    <?php if(isset($_SESSION['delete_con'])) : ?>
+                  <div class="text-center alert alert-success mb-0">
+                      <h3 id="alert" style="font-family: fantasy;text-shadow: none;">
+                          <?php 
+                              echo $_SESSION['delete_con']; 
+                              unset($_SESSION['delete_con']);
+                          ?>
+                      </h3>
+                  </div>
+    <?php endif ?>
 
     <div class="row">
         <table class="table table-dark table-hover">
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">ID</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Username</th>
-                    <th scope="col">Password</th>
-                    <th scope="col">Edit</th>
-                    <th scope="col">Delete</th>
+                    <th scope="col">EMAIL</th>
+                    <th scope="col">TITLE</th>
+                    <th scope="col">DETAIL</th>
+                    <th scope="col">VIEW</th>
+                    <th scope="col">DELETE</th>
                 </tr>
             </thead>
             <?php 
-              $sel_user = $conn->prepare("SELECT * FROM user_tb");
-              $sel_user->execute();
+              $sel_contact = $conn->prepare("SELECT * FROM contact");
+              $sel_contact->execute();
 
               $i = 1;
-              while($rowuser = $sel_user->fetch(PDO::FETCH_ASSOC)){
+              while($rowcontact = $sel_contact->fetch(PDO::FETCH_ASSOC)){
             ?>
             <tbody>
                 <tr>
                     <th scope="row"><?php echo $i; ?></th>
-                    <td><?php echo $rowuser['id']; ?></td>
-                    <td><?php echo $rowuser['email']; ?></td>
-                    <td><?php echo $rowuser['username']; ?></td>
-                    <td><?php echo $rowuser['password']; ?></td>
-                    <td><a href="edituser.php?userid=<?php echo $rowuser['id']; ?>" id="btn-edit" class="btn btn-warning">EDIT</a></td>
-                    <td><a href="delete_user.php?userid=<?php echo $rowuser['id']; ?>" id="btn-delete" class="btn btn-danger">DELETE</a></td>
+                    <td><?php echo $rowcontact['email']; ?></td>
+                    <td><?php echo $rowcontact['title']; ?></td>
+                    <td><?php echo $rowcontact['detail']; ?></td>
+                    <td><a href="view_con.php?contact_id=<?php echo $rowcontact['contactID']; ?>" id="btn-edit" class="btn btn-warning">VIEW</a></td>
+                    <td><a href="delete_con.php?contact_id=<?php echo $rowcontact['contactID']; ?>" id="btn-delete" class="btn btn-danger">DELETE</a></td>
                 </tr>
             </tbody>
               <?php  

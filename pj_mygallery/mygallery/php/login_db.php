@@ -18,7 +18,7 @@
             $_SESSION['error'] = "Please enter your password.";
             header('Location: ../login.php');
         }else if($username && $password){
-            if($username == "admin" && $password == "123456"){
+            if($username == "admin" && $password == "000000"){
                 $_SESSION['admin'] = $username;
                 $_SESSION['login_admin'] = "Login successfuly.";
                 header('Location: ../admin.php');

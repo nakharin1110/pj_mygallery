@@ -14,7 +14,7 @@
         $delete_stmt->bindParam(":id",$id_delete);
         $delete_stmt->execute();
 
-        $_SESSION['upload_succ'] = "File image delete successfully. Please wait to refresh the page.";
+        $_SESSION['upload_succ'] = "File image delete successfully.";
         header('Location: user.php');
     }else{
         header('Location: user.php');
